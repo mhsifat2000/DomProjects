@@ -1,26 +1,95 @@
 *{
     margin: 0;
     padding: 0;
+    color: gray;
 }
-:root{
-    --bgColor:white;
+#root{
+    background: black;
 }
-
 .container{
     background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: justify;
 }
-.btn{
-    margin:30px auto;
-    height: 100px;
-    width: 300px;
+#btn{
+    height: 50px;
     color:white;
     background: brown;
-    display: inline-block;
-    font-size: 40px;
+    font-size: 1rem;
     border: none;
     outline: none;
-    border-radius: 20%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#controls{
+    display: grid;
+    grid-template-columns:3fr 1fr ;
+    width: 300px;
+}
+.show{
+    height: 50px;
+    
+}
+#output{
+    border-radius: 10px;
+    height: 50px;
+    width: 250px;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    text-align: center;
+}
+#copy{
+    height:50px ;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0; 
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tost-massage{
+    position: fixed;
+    right:2rem;
+    top: 2rem;
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.tost-massage-in{
+    animation: tost-massage-in 0.5s ease-out;
+}
+
+.tost-massage-out{
+    animation: tost-massage-out 0.5s ease-in;
+}
+@keyframes tost-massage-in {
+    from{
+       transform: translateX(200px); 
+       opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes tost-massage-out {
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateX(200px);
+    }
 }
