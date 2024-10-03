@@ -13,6 +13,7 @@
     justify-content: center;
     align-items: center;
     text-align: justify;
+    height: 100vh;
 }
 #btn{
     height: 50px;
