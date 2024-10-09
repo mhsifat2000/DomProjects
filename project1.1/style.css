@@ -45,6 +45,7 @@ body {
 	font-size: 0.9rem;
 	font-weight: 600;
 	cursor: pointer;
+	margin:.5rem;
 }
 
 .section-title {
@@ -216,6 +217,14 @@ label {
 
 /* color boxes */
 .preset-colors {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: flex-start;
+	padding: 1rem 0;
+}
+
+.custom-colors {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
