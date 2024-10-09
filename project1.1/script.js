@@ -34,7 +34,7 @@ const defaultPresetColors = [
 ];
 const customColors = [];
 
-const copySound = new Audio('./copy.mp3');
+const copySound = new Audio('./audio/copy.mp3');
 
 const hexCodeCopied = new Audio('./audio/hexCodeCopied.mp3');
 
