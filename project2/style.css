@@ -13,7 +13,7 @@ body{
 .container{
     border: black 0.1rem solid;
     width: 80vw;
-    height: 25rem;
+    height: 30rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
