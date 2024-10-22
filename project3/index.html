@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <title>Js with api</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    
 </head>
 <body>
     <div class="container" id="container">        
         <p id="quotBody">loading....</p>        
         <h4 id="quotAuthor">loading....</h4>
-        
-        <button id="btn">New Quote</button>
+        <div class="button-section">
+        <button id="btn">New Quote
+        </button>
+        <button id="cpBtn">
+            Copy
+        </button>
+        </div>
     </div>
+    <div class="container2">
+        <h1>BMI Calculator </h1>
+        <div class="input-section" id="input-section">
+            
+            <input type="number" name="wt-kg" id="wt-kg" placeholder="Body-Mass(kg)">
+            
+            <select id="weight-select">
+                <option value="kg" selected>kg</option> 
+                <option value="pound">pound</option>                            
+            </select>
+            
+            <input type="number" name="height" id="height" placeholder="Body-Height(m)">
+            
+            <select id="height-select">
+                <option value="m" selected>m</option>
+                <option value="ft">ft</option>
+            </select>
+            
+        </div>
+        <div class="output" id="output">
+            
+        </div>
+        <div class="button-section">
+            <button class="btn" id="reset-btn"> Reset</button>
+            <button class="btn" id="bmi-btn"> BMI</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
