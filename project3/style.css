@@ -3,8 +3,9 @@
     padding: 0;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    padding: 50px 0px;
     background-image: url('img.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,6 +13,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap:30px;
 }
 .container{
     height: auto;
@@ -32,16 +35,20 @@ body{
     margin-bottom: 10px;
     margin-top: 10px;
     border-bottom: 1px solid #eaeaea;
-    color: black;
+    color: wheat;
 }
 .container h4{
     border-bottom: 1px solid #eaeaea;
     text-align: center;
-    color: black;
+    color: whitesmoke;
     font-weight: bolder;
 }
-.container button{
-    display: block;
+.button-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.button-section button{
     margin: auto;
     border: none;
     outline: none;
@@ -50,3 +57,78 @@ body{
     background: #0096ff;
     margin-top: 5px;
 }
+
+.container2{
+    min-height: 25rem;
+    width: 80%;
+    padding: 10px;
+    background:rgba( 42, 0, 100, 0.2 );
+    box-shadow:0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter:blur( 8.5px );
+    -webkit-backdrop-filter:blur( 8.5px );
+    border-radius:10px;
+    border:1px solid rgba( 255, 255, 255, 0.18 );
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+ 
+}
+.container2 h1{
+    margin: 20px auto;
+}
+.input-section{
+    width: 90%;
+    height: 8rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row-gap:10px;
+    grid-column-gap: 0px;
+    margin: 10px auto; 
+    
+}
+
+.input-section select{
+   width: 100%;
+   height: 3.1rem;
+   outline: none;
+   border: none;
+   padding: 0.3rem;
+   font-size: 1.1rem;
+   background: #eaeaea;
+   border-radius:0 0.4rem 0.4rem 0;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.input-section input{
+    width: 94%;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    padding: 0.3rem;
+    background: #eaeaea;
+    font-size: 1.1rem;
+    border-radius:0.4rem 0 0 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+} 
+.output{
+    width: 90%;
+    height: 4.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background: #eaeaea;
+    border-radius: 0.4rem;
+    padding:0.3rem ;
+    margin: auto;
+}
+
+.button-section{
+    margin: 1rem auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    width: 40%;
+    height: 2rem;
+    border: none;
+    background:#0081ff;
+    border-radius:.4rem;
+}
+
