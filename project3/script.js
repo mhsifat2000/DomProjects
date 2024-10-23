@@ -1,6 +1,5 @@
 const urlAPI = 'https://api.api-ninjas.com/v1/quotes?category=health';
-const keyAPI = 'e7Z0YXfbotov5ztD7ATCDQ==ShoAHuP6hrb4LpJS'; // Replace with your actual API key
-
+const keyAPI = 'e7Z0YXfbotov5ztD7ATCDQ==ShoAHuP6hrb4LpJS'; 
 window.onload = () => {
   main();
   getQuotes();
@@ -36,13 +35,11 @@ const getQuotes = () => {
     })
     .then(data => data.json())
     .then(data => {
-      console.log(data); // Log the API response to the console
+      console.log(data); 
 
-      // Check if 'data' is an array and has at least one element
       if (Array.isArray(data) && data.length > 0) {
         const quoteData = data[0]; 
 
-        // Check if the necessary properties exist in the first element
         if (quoteData.quote && quoteData.author) {
           const quotBody = document.getElementById('quotBody');
           const quotAuthor = document.getElementById('quotAuthor');
@@ -67,12 +64,10 @@ function copyToClipboard() {
   if (quotBody) {
     navigator.clipboard.writeText(quotBody.innerText)
       .then(() => {
-        alert('Quote copied to clipboard!');
-        // Optional: Provide visual feedback to the user
+        console.log('Quote copied to clipboard!');
       })
       .catch(err => {
         console.error('Failed to copy quote: ', err);
-        // Optional: Display an error message to the user
       });
   } else {
     console.warn("Quote element not found for copying.");
@@ -110,35 +105,49 @@ function calculateBMI() {
 
     const bmi = weightInKg / (heightInMeters * heightInMeters);
 
-    displayResult(bmi, outputDisplay);
+    // Improved advice logic
+    let advice = "";
+    if (bmi < 18.5) {
+      advice = (18.5 * heightInMeters * heightInMeters - weightInKg).toFixed(2); 
+      advice = `gain ${advice} kg to reach a normal BMI.`;
+    } else if (bmi > 24.99) {
+      advice = (weightInKg - 24.99 * heightInMeters * heightInMeters).toFixed(2);
+      advice = `lose ${advice} kg to reach a normal BMI.`;
+    } 
+    else if(bmi <24.99) {
+         
+      advice = `lead a normal life for continue this BMI. `;
+    }
+
+    displayResult(bmi, outputDisplay, advice); 
   } else {
     console.warn("One or more BMI input/output elements not found.");
   }
 }
 
-function displayResult(bmi, outputDisplay) {
-  let category = "";
+function displayResult(bmi, outputDisplay, advice) {
+  let category; 
   if (bmi <= 18.5) {
     category = "Underweight";
-    outputDisplay.style.color = '#a400ff'
+    outputDisplay.style.color = '#a400ff';
   } else if (bmi <= 24.99) {
-    category = "Normal Weight";
-    outputDisplay.style.color = '#00dc03'
+    category = "Normal Weight"; 
+    outputDisplay.style.color = '#00dc03';
   } else if (bmi <= 29.99) {
     category = "Overweight";
-    outputDisplay.style.color = '#f8ff00'
+    outputDisplay.style.color = '#f8ff00';
   } else if (bmi <= 34.99) {
     category = "Class I obesity";
-    outputDisplay.style.color = '#ff4900'
+    outputDisplay.style.color = '#ff4900';
   } else if (bmi <= 39.99) {
     category = "Class II obesity";
-    outputDisplay.style.color = '#ff005e'
+    outputDisplay.style.color = '#ff005e';
   } else {
     category = "Class III obesity";
-    outputDisplay.style.color = '#ff0a00'
+    outputDisplay.style.color = '#ff0a00';
   }
 
-  outputDisplay.innerHTML = `Your BMI is: ${bmi.toFixed(2)}<br>Category: ${category}`;
+  outputDisplay.innerHTML = `Your BMI is: ${bmi.toFixed(2)}<br>Category: ${category} <br>Advice: You should ${advice}`;
 }
 
 function resetInputs() {
@@ -154,7 +163,7 @@ function resetInputs() {
     heightInput.value = '';
     heightUnitSelect.value = 'm';
     outputDisplay.innerHTML = '';
-    outputDisplay.style.color = 'black';
+    outputDisplay.style.color = 'black'; 
   } else {
     console.warn("One or more BMI input/output elements not found for reset.");
   }
