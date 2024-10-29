@@ -1,0 +1,92 @@
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to left,#ecfcfc,#ecfcfc,#ecfcfc,#ecfcfc, #ecf4fc,#f7f4ff, #fff4ff,#fcf5f8,#f4f6fc,#fffcf7);
+    display: flex;
+    flex-direction: column;
+}
+.logo-container{
+    height:30% ;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo-container img{
+    height: 20vw;
+    width:20vw ;
+    margin-top: 50px;
+}
+.logo-container select{
+    border: none;
+    background: transparent;
+    color:#5b5b5bd2 ;
+}
+.input-group{
+    width: 98vw;
+    height:50% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-field{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+}
+.input-field input{
+    border: 1px #99a7a7d6 solid;
+    height: 45px;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+.input-field input::placeholder{
+    color: #5b5b5bd2;
+    font-size:.91rem;
+    font-weight: 420;
+}
+.input-group button{
+    width: 95%;
+    height: 45px;
+    border-radius: 30px;
+    border: none;
+    background: #316FF6;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.input-group p{
+    color: #262626;
+    font-size:.8rem;
+    font-weight: 490;
+}
+.footer{
+    width: 98vw;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer button{
+    width: 95%;
+    height: 40px;
+    border-radius: 45px;
+    border:1px solid #2596be;
+    background: transparent;
+    color: #1e85b1;
+    margin-top: 10px;
+    font-weight: 520;
+    
+}
+.footer img{
+    height: 60px;
+    width: 80px;
+}
