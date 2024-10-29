@@ -71,12 +71,17 @@ body{
     padding: 5px 15px;
 }
 
-.input-field input::placeholder{
-    
+#hide-show{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 85px;
+    right: 15px;
+    display: none;
 }
 .input-field input:focus{
-    outline: 2px solid #000;
-    border: none;
+    outline: none;
+    border: 2px solid #000;
     
 }
 
@@ -180,17 +185,40 @@ body{
     flex-direction: column;
     justify-content: center;
     gap:10px;
+    position: relative;
 }
 .input-field input{
     border: 1px #99a7a7d6 solid;
     height: 45px;
     border-radius: 10px;
-    padding: 5px 15px;
+    padding: 5px;
+    position: relative;
+}
+#hide-show{
+    height: 20px;
+    width:20px;
+    position: absolute;
+    top: 85px;
+    right: 15px;
+    display: none;
 }
 .input-field input::placeholder{
     color: #5b5b5bd2;
     font-size:.91rem;
-    font-weight: 420;
+    font-weight: 420;    
+}
+
+
+.input-field input:focus{
+    outline: none;
+    border: 2px solid #000;
+    
+}
+.input-field input:focus::placeholder{
+    transform: scale(0.9);
+    position: absolute;
+    top: 1px;
+    left: 1px;
 }
 .input-group button{
     width: 95%;
