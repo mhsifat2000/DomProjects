@@ -1,10 +1,152 @@
-
-body {
-    height: 100vh;
+*{
     margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 769px){
+body{
+    background:#f3f4f8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    position: relative;  
+      
+}
+
+.branding{
+   min-height:auto;
+   max-width: 80%;
+   margin: 200px auto;
+   padding: 50px;
+}
+.branding h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color:#316FF6 ;
+}
+.branding p{
+    font-size: 1.4rem;
+    width: 90%;
+    color: #2f2f2f ;
+    margin-top: 8px;
+}
+.container{
+   background: #fff;   
+   display: flex;
+   gap:20px;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height:auto;
+   min-width: 80%;
+   margin: 200px auto;
+   border-radius: 10px;
+   padding: 5px;
+   position: relative;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
+.input-group{
+    width: 98%;    
+    height:15rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center ;
+    gap:15px;
+    width: 98%;
+    position: relative;
+}
+.input-field input{
+    border: 1px #cececeb9 solid;
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+.input-field input::placeholder{
+    
+}
+.input-field input:focus{
+    outline: 2px solid #000;
+    border: none;
+    
+}
+
+.input-group button{
+    width: 97%;
+    height:50px;
+    border-radius: 10px;
+    border: none;
+    background: #316FF6;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 450;
+}
+
+.input-group p{
+    color:#0d66a2;
+    font-size:.8rem;
+    font-weight: 490;
+    margin-top: 15px;
+}
+.footer{
+    width: 98%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer button{
+    width: 50%;
+    height: 50px;
+    background: #41b72a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin:25px auto 10px;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+.hr{
+    height: 2px;
+    background: #cececeb9;
+    width: 96%;
+}
+.logo-container{
+    display: none;
+}
+.footer img{
+    display: none;
+}
+.page{
+    position: absolute;
+    bottom: -50px;
+    font-size: 0.9rem;
+}
+
+
+}
+
+@media(max-width: 768px){
+    
+.container{
+    height: 100vh;
     background: linear-gradient(to left,#ecfcfc,#ecfcfc,#ecfcfc,#ecfcfc, #ecf4fc,#f7f4ff, #fff4ff,#fcf5f8,#f4f6fc,#fffcf7);
     display: flex;
     flex-direction: column;
+}
+.branding{
+    display: none;
 }
 .logo-container{
     height:30% ;
@@ -65,6 +207,7 @@ body {
     color: #262626;
     font-size:.8rem;
     font-weight: 490;
+    margin: 10px auto;
 }
 .footer{
     width: 98vw;
@@ -77,8 +220,8 @@ body {
 
 .footer button{
     width: 95%;
-    height: 40px;
-    border-radius: 45px;
+    height: 45px;
+    border-radius: 30px;
     border:1px solid #2596be;
     background: transparent;
     color: #1e85b1;
@@ -89,4 +232,8 @@ body {
 .footer img{
     height: 60px;
     width: 80px;
+}
+.page{
+    display: none;
+}
 }
