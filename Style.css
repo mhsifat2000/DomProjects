@@ -1,0 +1,76 @@
+*{
+     margin: 0;
+     padding: 0;
+}
+body{
+     display: grid;
+     height: 100vh;
+     align-content: center;
+     justify-content: center;
+     position: relative;
+     background-color: #091f36;
+}
+.container{ 
+     height: 300px;
+     width: 300px;
+     border:3px black solid ;
+     display: grid;
+     grid-gap: 2px;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     padding: 0px;
+     border-radius: 10px;
+     background: #4f5f76;
+}
+.box{
+     height: 96%;
+     width: 96%;
+     background:#9e363a ;
+     border-radius: 10px;
+     overflow: scroll;
+     font-size: 0.5rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: whitesmoke solid 2px;
+}
+.box:hover{
+     transform: scale(1.25);
+     transition: 0.5s;
+}
+.p{
+     display: none;
+}
+.box:hover .p {
+  display: block;
+}
+
+.btn-container {
+  width: 300px;
+  display: grid;
+  grid-template-areas:'bigBtn bigBtn' '1fr 1fr';
+  ;
+  justify-items: center;
+  margin-top: 20px;
+  grid-gap: 20px;
+}
+
+.btn-container :where(button) {
+  background: lightskyblue;
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.btn-container :where(button):disabled{
+     color:#eaeaea;
+     background: #262626;
+}
+.btn-container :where(button):hover {
+     border: blueviolet solid  1px;
+     transform: scale(1.1);
+}
+.big-btn{ 
+     grid-area: bigBtn;
+     
+}
